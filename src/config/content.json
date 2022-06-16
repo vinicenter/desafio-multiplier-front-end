@@ -1,0 +1,39 @@
+{
+  "brand": {
+    "username": "Pokedex",
+    "logo": "https://www.pngmart.com/files/2/Pokeball-Transparent-PNG.png"
+  },
+  "generic": {
+    "load": {
+      "loadingMessage": "Carregando...",
+      "fewSecondsLeft": "Espere mais alguns segundos.",
+      "error": "Algo errado aconteceu :("
+    },
+    "copy": {
+      "clickToCopyMessage": "Clique para copiar",
+      "copiedMessage": "Copiado!"
+    },
+    "buttons": {
+      "next": "Próximo",
+      "previous": "Anterior",
+      "details": "Mostrar mais",
+      "capture": "Capturar"
+    },
+    "nothingFound": "Nada encontrado."
+  },
+  "pages": {
+    "description": "Descrição",
+    "photo": "Foto",
+    "discover": "Descubra mais"
+  },
+  "views": {
+    "pokemons": {
+      "title": "Pokemons",
+      "description": "Aqui você pode ver todos os pokemons disponiveis para adicionar na pokedex"
+    },
+    "pokedex": {
+      "title": "Pokedex",
+      "description": "Veja todos os seus pokemons"
+    }
+  }
+}

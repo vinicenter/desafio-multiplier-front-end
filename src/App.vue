@@ -1,21 +1,42 @@
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import NavBarComposition from '@/components/composition/NavBarComposition.vue';
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <NavBarComposition>
+    <template v-slot:right>
+      <li class="nav-item">
+        <RouterLink class="nav-link" to="/">Pokemons</RouterLink>
+      </li>
+      <li class="nav-item">
+        <RouterLink class="nav-link" to="/pokedex">Minha pokedex</RouterLink>
+      </li>
+    </template>
+  </NavBarComposition>
+
+  <div class="content">
+    <router-view/>
+  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+//global theme colors
+:root {
+  --main-color: #eeeeee;
+  --hover-color: #a2a2a2;
+  --text-color: #000;
+  --background-primary: #e6e6e6;
+  --background-secondary: #b3b3b3;
+  --background-tertiary: #6f6f6f;
+}
+//bootstrap color config
+$primary: #eeeeee;
+
+@import "bootstrap";
+</style>
+
+<style lang="scss" scoped>
+.content {
+  margin-top: 70px;
 }
 </style>

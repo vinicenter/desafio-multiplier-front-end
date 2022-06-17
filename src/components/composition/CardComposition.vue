@@ -94,20 +94,19 @@ export default {
 
 <style lang="scss" scoped>
 .card {
+  background-color: var(--card-background-color) !important;
+}
+
+.card {
   -webkit-box-shadow: 0 0 27px 0 rgb(0 0 0 / 10%) !important;
   -moz-box-shadow: 0 0 27px 0 rgba(0,0,0,.10) !important;
   box-shadow: 0 0 27px 0 rgb(0 0 0 / 10%) !important;
   border-radius: 5px !important;
 }
 .card:hover {
-  border-color: var(--hover-color);
-  -webkit-transition: color 1s ease, border-color 1s ease;
-  transition: color 1s ease, border-color 1s ease;
   -webkit-box-shadow: 0 0 27px 0 rgb(0 0 0 / 51%) !important;
-
   -moz-box-shadow: 0 0 27px 0 rgba(0,0,0,.51) !important;
   box-shadow: 0 0 27px 0 rgb(0 0 0 / 51%) !important;
-
   -webkit-transition: color 1s ease, box-shadow 1s ease;
   transition: color 1s ease, box-shadow 1s ease;
 }

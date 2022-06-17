@@ -1,6 +1,6 @@
 {
   "brand": {
-    "username": "Pokedex",
+    "appname": "Pokédex",
     "logo": "https://www.pngmart.com/files/2/Pokeball-Transparent-PNG.png"
   },
   "generic": {
@@ -9,31 +9,37 @@
       "fewSecondsLeft": "Espere mais alguns segundos.",
       "error": "Algo errado aconteceu :("
     },
-    "copy": {
-      "clickToCopyMessage": "Clique para copiar",
-      "copiedMessage": "Copiado!"
-    },
     "buttons": {
       "next": "Próximo",
       "previous": "Anterior",
-      "details": "Mostrar mais",
-      "capture": "Capturar"
+      "details": "Detalhes",
+      "capture": "Capturar",
+      "remove": "Remover"
     },
     "nothingFound": "Nada encontrado."
   },
-  "pages": {
-    "description": "Descrição",
-    "photo": "Foto",
-    "discover": "Descubra mais"
+  "pokemons": {
+    "weight": "Peso",
+    "height": "Altura",
+    "evolutions": "Evoluções",
+    "species": "Espécie",
+    "stats": "Estatísticas",
+    "physiognomy": "Fisionomia",
+    "moves": "Movimentos",
+    "types": "Tipos"
+  },
+  "searchPokemon": {
+    "placeholder": "Digite o nome do pokémon",
+    "label": "Pesquisar pokémon"
   },
   "views": {
     "pokemons": {
-      "title": "Pokemons",
-      "description": "Aqui você pode ver todos os pokemons disponiveis para adicionar na pokedex"
+      "title": "Pokémons selvagens",
+      "description": "Capture pokemons selvagens"
     },
     "pokedex": {
-      "title": "Pokedex",
-      "description": "Veja todos os seus pokemons"
+      "title": "Pokédex",
+      "description": "Veja todos os seus pokemons capturados"
     }
   }
 }

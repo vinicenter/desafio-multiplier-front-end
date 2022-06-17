@@ -9,10 +9,6 @@ export default {
       type: String,
       default: 'link',
     },
-    href: {
-      type: String,
-      default: '#',
-    },
     isDisabled: {
       type: Boolean,
       default: false,
@@ -36,7 +32,7 @@ export default {
 <template>
   <RouterLink
     v-if="type == 'router'"
-    :to="href" :class="'btn btn-' + styleType"
+    :class="'btn btn-' + styleType"
     :data-bs-toggle="dataBsToggle"
     :data-bs-target="dataBsTarget"
     :data-bs-dismiss="dataBsDismiss"
@@ -46,7 +42,6 @@ export default {
   </RouterLink>
   <a
     v-else
-    :href="href"
     :class="'btn btn-' + styleType"
     :data-bs-toggle="dataBsToggle"
     :data-bs-dismiss="dataBsDismiss"
@@ -56,3 +51,9 @@ export default {
       <slot />
   </a>
 </template>
+
+<style lang="scss">
+.btn {
+  color: var(--text-color) !important;
+}
+</style>

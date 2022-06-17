@@ -7,7 +7,7 @@ import content from '@/config/content.json';
     <div class="container-fluid">
       <RouterLink class="navbar-brand" to="/">
         <img :src="content.brand.logo" alt="" width="60" height="60">
-        {{ content.brand.username }}
+        <a class="appname">{{ content.brand.appname }}</a>
       </RouterLink>
       <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
@@ -48,11 +48,15 @@ import content from '@/config/content.json';
 </style>
 
 <style lang="scss" scoped>
+.bg-light {
+  background-color: var(--navbar-color) !important;
+}
 .navbar {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
-.navbar-brand {
+.navbar-brand, .appname {
   color: var(--text-color);
+  text-decoration: none;
 }
 </style>

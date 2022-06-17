@@ -55,7 +55,11 @@ export default {
     <slot v-if="isLoaded"></slot>
     <div v-else class="spinner">
       <div v-if="!loadingHasError" class="spinner-border" role="status">
-        <span class="visually-hidden">{{ content.generic.load.loadingMessage }}</span>
+        <span class="visually-hidden">
+          <TextComponent>
+            {{ content.generic.load.loadingMessage }}
+          </TextComponent>
+        </span>
       </div>
       <div v-if="isLoadingSlow && !loadingHasError">
         <TextComponent>{{ content.generic.load.fewSecondsLeft }}</TextComponent>
@@ -78,5 +82,6 @@ export default {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  color: var(--text-color);
 }
 </style>

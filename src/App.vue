@@ -19,6 +19,7 @@ export default {
 </script>
 
 <template>
+  <notifications position="bottom right" />
   <NavBarComposition>
     <template v-slot:right>
       <li class="nav-item">

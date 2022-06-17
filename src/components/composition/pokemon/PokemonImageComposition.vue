@@ -39,6 +39,12 @@ export default {
       };
 
       reader.readAsDataURL(file);
+
+      this.$notify({
+        title: content.notifications.pokemonImage,
+        text: content.notifications.updatedImage,
+        type: 'success',
+      });
     },
     getPokemonImage() {
       const image = getPokemonImageOnLocalStorage(this.pokemonId);
@@ -51,6 +57,11 @@ export default {
       removePokemonImageFromLocalStorage(this.pokemonId);
       this.pokemonImage = this.getPokemonImage();
       this.$emit('imageChanged');
+      this.$notify({
+        title: content.notifications.pokemonImage,
+        text: content.notifications.removedImage,
+        type: 'error',
+      });
     },
   },
 };

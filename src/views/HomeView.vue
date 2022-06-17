@@ -64,9 +64,17 @@ export default {
     addPokemonToPokedex(pokemon) {
       if (addPokemonToLocalStorage(pokemon)) {
         this.$emit('refreshPokemonCount');
-        alert('pokemon added to your pokedex');
+        this.$notify({
+          title: content.notifications.pokedex,
+          text: content.notifications.capturedPokemon,
+          type: 'success',
+        });
       } else {
-        alert('pokemon already in your pokedex');
+        this.$notify({
+          title: content.notifications.pokedex,
+          text: content.notifications.pokemonAlreadyCaptured,
+          type: 'error',
+        });
       }
     },
   },

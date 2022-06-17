@@ -55,6 +55,11 @@ export default {
       removePokemon(id);
       this.loadPage();
       this.$emit('refreshPokemonCount');
+      this.$notify({
+        title: content.notifications.pokedex,
+        text: content.notifications.removedPokemon,
+        type: 'error',
+      });
     },
   },
   computed: {

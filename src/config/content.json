@@ -47,5 +47,14 @@
       "description": "Veja todos os seus pokemons capturados",
       "empty": "Sua pokedex está vazia."
     }
+  },
+  "notifications": {
+    "pokedex": "Pokédex",
+    "pokemonImage": "Imagem do pokémon",
+    "capturedPokemon": "Capturou um pokémon",
+    "removedPokemon": "Removido um pokémon",
+    "removedImage": "Removida uma imagem do pokémon",
+    "updatedImage": "Atualizada uma imagem do pokémon",
+    "pokemonAlreadyCaptured": "Este pokémon já foi capturado"
   }
 }

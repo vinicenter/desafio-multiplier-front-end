@@ -75,7 +75,7 @@ export default {
       return entities;
     },
     pokemonOnPokedex() {
-      const pokemonListIdArray = getPokemonList().split(', ');
+      const pokemonListIdArray = getPokemonList();
       const pokemonList = [];
 
       this.entities.forEach((pokemon) => {

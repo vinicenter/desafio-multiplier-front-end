@@ -1,35 +1,50 @@
+function isPokemonAlreadyInLocalStorage(pokemonList, id) {
+  for (let i = 0; i < pokemonList.length; i += 1) {
+    if (pokemonList[i] === id) return true;
+  }
+
+  return false;
+}
+
 export function getPokemonList() {
   let pokemonList = localStorage.getItem('pokemonList');
-  if (pokemonList == null) pokemonList = '';
+  if (pokemonList == null || pokemonList === undefined) pokemonList = '';
+
+  pokemonList = pokemonList.split(',');
+  if (pokemonList[0] === '') pokemonList.shift();
+  if (!(pokemonList.length > 0)) pokemonList = [];
 
   return pokemonList;
 }
 
 export function removePokemon(pokemon) {
-  let pokemonList = getPokemonList();
-  pokemonList = pokemonList.replace(`${pokemon}, `, '');
-  pokemonList = pokemonList.replace(`, ${pokemon}`, '');
-  pokemonList = pokemonList.replace(pokemon, '');
-  localStorage.setItem('pokemonList', pokemonList);
+  const pokemonList = getPokemonList();
+
+  if (isPokemonAlreadyInLocalStorage(pokemonList, pokemon)) {
+    for (let i = 0; i < pokemonList.length; i += 1) {
+      if (pokemonList[i] === pokemon) {
+        pokemonList.splice(i, 1);
+      }
+    }
+  }
+
+  localStorage.setItem('pokemonList', pokemonList.toString());
 }
 
 export function addPokemonToLocalStorage(id) {
-  let pokemonList = getPokemonList();
+  const pokemonList = getPokemonList();
 
-  if (pokemonList.match(id)) return false;
+  if (isPokemonAlreadyInLocalStorage(pokemonList, id)) return false;
 
-  if (!(pokemonList === '')) pokemonList += `, ${id}`;
-  else pokemonList = id;
+  pokemonList.push(id);
 
-  localStorage.setItem('pokemonList', pokemonList);
+  localStorage.setItem('pokemonList', pokemonList.toString());
   return true;
 }
 
 export function getPokemonsCount() {
   const pokemonList = getPokemonList();
-  if (pokemonList === '') return 0;
-  const pokemonListArray = pokemonList.split(', ');
-  return pokemonListArray.length;
+  return pokemonList.length;
 }
 
 export function isPokedexEmpty() {

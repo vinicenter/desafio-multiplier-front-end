@@ -1,6 +1,13 @@
+# Mockup do projeto
+
+<img src="https://i.imgur.com/9zwEt3A.png" width="700" height="auto" alt="Mockup Image for project"></img>
+
+# Veja o projeto ao vivo por meio deste link:
+https://vini.center/pokedex
+
 # Como rodar o projeto em sua máquina?
 
-## Dependências gerais do projeto
+## Dependências gerais
 
 Para rodar o projeto em sua máquina, você irá precisar das seguintes dependências:
 
@@ -10,7 +17,7 @@ Para rodar o projeto em sua máquina, você irá precisar das seguintes dependê
   <li>Git</li>
 </ul>
 
-## Baixando e rodando o projeto
+## Baixando e rodando
 
 Após ter satisfeito essas depêndencias, você pode clonar o repositório com o comando abaixo:
 ```sh
@@ -51,7 +58,7 @@ npm run build
 <li>vue3-notification</li>
 </ul>
 
-# Diferenciais do projeto
+# Diferenciais
 
 <ul>
 <li>Arquivo de configuração de texto para rápida tradução das mensagens</li>

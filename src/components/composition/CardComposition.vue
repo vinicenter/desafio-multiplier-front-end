@@ -95,64 +95,51 @@ export default {
 <style lang="scss" scoped>
 .card {
   background-color: var(--card-background-color) !important;
-}
-
-.card {
   -webkit-box-shadow: 0 0 27px 0 rgb(0 0 0 / 10%) !important;
   -moz-box-shadow: 0 0 27px 0 rgba(0,0,0,.10) !important;
   box-shadow: 0 0 27px 0 rgb(0 0 0 / 10%) !important;
   border-radius: 5px !important;
-}
-.card:hover {
-  -webkit-box-shadow: 0 0 27px 0 rgb(0 0 0 / 51%) !important;
-  -moz-box-shadow: 0 0 27px 0 rgba(0,0,0,.51) !important;
-  box-shadow: 0 0 27px 0 rgb(0 0 0 / 51%) !important;
-  -webkit-transition: color 1s ease, box-shadow 1s ease;
-  transition: color 1s ease, box-shadow 1s ease;
-}
-.card-header {
-  background-color: var(--background-tertiary);
-}
-.card-body {
-  padding: 1rem 1rem 1rem 1rem;
-  border-radius: 18px !important;
-}
-.card-img-top {
-  height: 13rem;
-  width: auto;
-}
-@media (max-width: 1400px) {
-  .card-img-top {
-    height: 10rem;
+  transition: color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-transition: color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &:hover {
+    -webkit-box-shadow: 0 0 27px 0 rgb(0 0 0 / 51%) !important;
+    -moz-box-shadow: 0 0 27px 0 rgba(0,0,0,.51) !important;
+    box-shadow: 0 0 27px 0 rgb(0 0 0 / 51%) !important;
+    -webkit-transition: color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
-}
-@media (max-width: 1200px) {
-  .card-img-top {
-    height: 10rem;
+
+  &-header {
+    background-color: var(--background-tertiary);
   }
-}
-@media (max-width: 766px) {
-  .card-img-top {
-    width: 18rem;
-    height: auto;
+  &-body {
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 18px !important;
   }
-}
-@media (max-width: 572px) {
-  .card-img-top {
-    width: 15rem;
-    height: auto;
-  }
-}
-@media (max-width: 486px) {
-  .card-img-top {
-    width: 13rem;
-    height: auto;
-  }
-}
-@media (max-width: 326px) {
-  .card-img-top {
-    width: 8rem;
-    height: auto;
+  &-img-top {
+    height: 13rem;
+    width: auto;
+
+    @media (max-width: 1400px) {
+      height: 10rem;
+    }
+    @media (max-width: 766px) {
+      height: 18rem;
+      width: auto;
+    }
+    @media (max-width: 572px) {
+      width: 15rem;
+      height: auto;
+    }
+    @media (max-width: 486px) {
+      width: 13rem;
+      height: auto;
+    }
+    @media (max-width: 326px) {
+      width: 8rem;
+      height: auto;
+    }
   }
 }
 </style>

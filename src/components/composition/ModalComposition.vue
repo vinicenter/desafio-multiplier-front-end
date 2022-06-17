@@ -23,7 +23,12 @@ export default {
     <div class="modal-content">
       <div class="modal-header">
         <TitleComponent :type="'h3'">{{ title }}</TitleComponent>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        />
       </div>
       <div class="modal-body">
         <slot></slot>
@@ -49,13 +54,15 @@ export default {
   -moz-box-shadow: 0 0 27px 0 rgba(0,0,0,.10) !important;
   box-shadow: 0 0 27px 0 rgb(0 0 0 / 10%) !important;
   border-radius: 5px !important;
-}
+  -webkit-transition: color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
-.modal-content:hover {
-  -webkit-box-shadow: 0 0 27px 0 rgb(0 0 0 / 51%) !important;
-  -moz-box-shadow: 0 0 27px 0 rgba(0,0,0,.51) !important;
-  box-shadow: 0 0 27px 0 rgb(0 0 0 / 51%) !important;
-  -webkit-transition: color 1s ease, box-shadow 1s ease;
-  transition: color 1s ease, box-shadow 1s ease;
+  &:hover {
+    -webkit-box-shadow: 0 0 27px 0 rgb(0 0 0 / 51%) !important;
+    -moz-box-shadow: 0 0 27px 0 rgba(0,0,0,.51) !important;
+    box-shadow: 0 0 27px 0 rgb(0 0 0 / 51%) !important;
+    -webkit-transition: color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
 }
 </style>

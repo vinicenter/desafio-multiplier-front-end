@@ -1,5 +1,21 @@
 <script setup>
 import NavBarComposition from '@/components/composition/NavBarComposition.vue';
+import { getPokemonsCount } from '@/util/pokedex';
+</script>
+
+<script>
+export default {
+  data() {
+    return {
+      countPokemons: getPokemonsCount(),
+    };
+  },
+  methods: {
+    pokemonsCount() {
+      this.countPokemons = getPokemonsCount();
+    },
+  },
+};
 </script>
 
 <template>
@@ -9,37 +25,41 @@ import NavBarComposition from '@/components/composition/NavBarComposition.vue';
         <RouterLink class="nav-link" to="/">Pokémons</RouterLink>
       </li>
       <li class="nav-item">
-        <RouterLink class="nav-link" to="/pokedex">Minha pokédex</RouterLink>
+        <RouterLink class="nav-link" to="/pokedex">
+          Minha pokédex ({{countPokemons}})
+        </RouterLink>
       </li>
     </template>
   </NavBarComposition>
 
   <div class="content">
-    <router-view/>
+    <RouterView @refreshPokemonCount="pokemonsCount()"/>
   </div>
 </template>
 
 <style lang="scss">
 //global theme colors
 :root {
-  --main-color: #CB0C0B;
+  --main-color: #E3350D;
   --hover-color: #a2a2a2;
   --text-color: #fff;
-  --navbar-color:  #78ADD3;
+  --navbar-text-color: #000;
+  --navbar-hover-color: #444;
+  --navbar-color:  #fff;
   --border-color: #fff;
-  --card-background-color: #C84442;
+  --card-background-color: #313131;
   --background-primary: #C1CAFF;
   --background-secondary: #b3b3b3;
   --background-tertiary: #6f6f6f;
 }
 
 //bootstrap color config
-$primary: #79AFD5;
+$primary: #E3350D;
 $danger: #CB0C0B;
-$warning: #b3a400;
-$success: #469D2C;
+$warning: #EE6B2F;
+$success: #4DAD5B;
 
-$body-bg: #1d4112;
+$body-bg: #616161;
 
 @import "bootstrap";
 </style>

@@ -40,9 +40,9 @@ import content from '@/config/content.json';
   cursor: pointer;
   -webkit-transition: color 0.5s ease-in, color 0.1s ease-out !important;
   transition: color 0.5s ease-in, color 0.1s ease-out !important;
-  color: var(--text-color) !important;
+  color: var(--navbar-text-color) !important;
   &:hover {
-    color: var(--hover-color) !important;
+    color: var(--navbar-hover-color) !important;
   }
 }
 </style>
@@ -56,7 +56,7 @@ import content from '@/config/content.json';
   padding-bottom: 0 !important;
 }
 .navbar-brand, .appname {
-  color: var(--text-color);
+  color: var(--navbar-text-color);
   text-decoration: none;
 }
 </style>

@@ -8,7 +8,8 @@ export function getPokemonList() {
 export function removePokemon(pokemon) {
   let pokemonList = getPokemonList();
   pokemonList = pokemonList.replace(`${pokemon}, `, '');
-  pokemonList = pokemonList.replace(`${pokemon}`, '');
+  pokemonList = pokemonList.replace(`, ${pokemon}`, '');
+  pokemonList = pokemonList.replace(pokemon, '');
   localStorage.setItem('pokemonList', pokemonList);
 }
 
@@ -22,4 +23,11 @@ export function addPokemonToLocalStorage(id) {
 
   localStorage.setItem('pokemonList', pokemonList);
   return true;
+}
+
+export function getPokemonsCount() {
+  const pokemonList = getPokemonList();
+  if (pokemonList === '') return 0;
+  const pokemonListArray = pokemonList.split(', ');
+  return pokemonListArray.length;
 }

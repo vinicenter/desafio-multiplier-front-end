@@ -10,8 +10,6 @@
       "error": "Algo errado aconteceu :("
     },
     "buttons": {
-      "next": "Próximo",
-      "previous": "Anterior",
       "details": "Detalhes",
       "capture": "Capturar",
       "remove": "Remover"

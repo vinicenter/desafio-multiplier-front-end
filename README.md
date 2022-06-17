@@ -76,3 +76,15 @@ Adicionalmente, tentaremos verificar sua experiência com programação funciona
 ---
 
 ## Boa sorte!
+
+
+
+4:00h - desenvolvendo
+1:00h - analisando API (identificando endpoints, rotas e etc)
+20:00m - analisando design do site do pokemon (extraindo cores e padrões)
+
+*eventos do Vue
+*textos em arquivo JSON para tradução
+*arquivo de configuração para endpoint de API
+*utilizando Sass css para style
+*notificação(colocar lib usada)

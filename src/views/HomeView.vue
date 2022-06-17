@@ -63,6 +63,7 @@ export default {
     },
     addPokemonToPokedex(pokemon) {
       if (addPokemonToLocalStorage(pokemon)) {
+        this.$emit('refreshPokemonCount');
         alert('pokemon added to your pokedex');
       } else {
         alert('pokemon already in your pokedex');

@@ -2,7 +2,7 @@
 import BadgeComponent from '@/components/core/BadgeComponent.vue';
 import ModalComposition from '@/components/composition/ModalComposition.vue';
 import TextComponent from '@/components/core/TextComponent.vue';
-import config from '@/config/config.json';
+import PokemonImageComposition from '@/components/composition/pokemon/PokemonImageComposition.vue';
 import content from '@/config/content.json';
 </script>
 
@@ -25,6 +25,11 @@ export default {
       type: Boolean,
       required: false,
     },
+    GoToType: {
+      type: Boolean,
+      default: true,
+      required: false,
+    },
   },
   methods: {
     getPokemonStatsBadge(stats) {
@@ -45,11 +50,30 @@ export default {
       });
       return badges;
     },
+    getPokemonMovesBadge(moves) {
+      const badges = [];
+      moves.forEach((element) => {
+        badges.push([
+          'warning', `${element.move.name}`,
+        ]);
+      });
+      return badges;
+    },
+    getPokemonAbilitiesBadge(abilities) {
+      const badges = [];
+      abilities.forEach((element) => {
+        badges.push([
+          'warning', `${element.ability.name}`,
+        ]);
+      });
+      return badges;
+    },
   },
   components: {
     TextComponent,
     ModalComposition,
     BadgeComponent,
+    PokemonImageComposition,
   },
 };
 </script>
@@ -60,25 +84,20 @@ export default {
     :title="pokemonOnModal.name"
   >
     <div v-if="isModalLoaded">
-      <div>
-        <img
-          :src="`${config.spriteBaseUrl}/${pokemonOnModal.id}.png`"
-          alt="pokemon image"
-          style="width: 100%"
+      <PokemonImageComposition
+        :showChange="true"
+        :pokemonId="pokemonOnModal.id"
+        @imageChanged="$emit('imageChanged')"
+      />
+      <div class="section">
+        <TextComponent>{{content.pokemons.types}}</TextComponent>
+        <BadgeComponent
+          :GoToType="GoToType"
+          :badges="getPokemonTypesBadge(pokemonOnModal.types)"
         />
       </div>
       <div class="section">
-        <div>
-          <TextComponent>{{content.pokemons.types}}</TextComponent>
-        </div>
-        <BadgeComponent :badges="getPokemonTypesBadge(pokemonOnModal.types)" />
-      </div>
-      <div class="section">
-        <div>
-          <TextComponent>
-            {{content.pokemons.physiognomy}}
-          </TextComponent>
-        </div>
+        <TextComponent>{{content.pokemons.physiognomy}}</TextComponent>
         <BadgeComponent :badges="
           [
             ['primary',
@@ -90,18 +109,16 @@ export default {
         " />
       </div>
       <div class="section">
-        <div>
-          <TextComponent>{{content.pokemons.stats}}</TextComponent>
-        </div>
+        <TextComponent>{{content.pokemons.abilitys}}</TextComponent>
+        <BadgeComponent :badges="getPokemonAbilitiesBadge(pokemonOnModal.abilities)" />
+      </div>
+      <div class="section">
+        <TextComponent>{{content.pokemons.stats}}</TextComponent>
         <BadgeComponent :badges="getPokemonStatsBadge(pokemonOnModal.stats)" />
       </div>
       <div class="section">
         <TextComponent>{{content.pokemons.moves}}</TextComponent>
-        <div v-for="move in pokemonOnModal.moves" :key="move">
-          <div class="col-12" v-if="!(move.move.name === undefined)">
-            <TextComponent>{{move.move.name}}</TextComponent>
-          </div>
-        </div>
+        <BadgeComponent :badges="getPokemonMovesBadge(pokemonOnModal.moves)" />
       </div>
     </div>
     <div v-else class="spinner">
@@ -132,5 +149,6 @@ export default {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  color: var(--text-color);
 }
 </style>

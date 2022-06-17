@@ -30,19 +30,19 @@ Com esta API([pokeapi v2](https://pokeapi.co/docsv2/#)) em mãos, precisamos que
 3. Listar os pokémons que foram adicionados a Pokédex. X
 4. Mostrar detalhes do personagem adicionados a Pokédex como: 
     - Nome X
-    - Imagem dando a opção do usuário fazer upload de sua própria imagem, substituindo a que é entregue via API + / -
+    - Imagem dando a opção do usuário fazer upload de sua própria imagem, substituindo a que é entregue via API X
     - Peso X
     - Tamanho X
     - Lista de tipos X
-    - Lista de habilidades 
+    - Lista de habilidades X
     - Estatísticas de velocidade X
     - Defesa X
     - Ataque X
     - Hp X
     - Cada passo de sua evolução
-    - Ao clicar em um item da lista de tipos, mostrar todos os pokémons daquele mesmo tipo, inclusive os que ainda não estão adicionados a Pokédex
-    - Ao clicar em um item da lista de habilidades mostrar o `short_effect` da mesma
-5. Excluir os pokémons que foram adicionados a Pokédex.
+    - Ao clicar em um item da lista de tipos, mostrar todos os pokémons daquele mesmo tipo, inclusive os que ainda não estão adicionados a Pokédex X
+    - Ao clicar em um item da lista de habilidades mostrar o `short_effect` da mesma da para fazer com as notificações
+5. Excluir os pokémons que foram adicionados a Pokédex. X
 
 **Sua aplicação web NÃO PRECISA:**
 
@@ -79,12 +79,12 @@ Adicionalmente, tentaremos verificar sua experiência com programação funciona
 
 
 
-4:00h - desenvolvendo
+4:30h - desenvolvendo
 1:00h - analisando API (identificando endpoints, rotas e etc)
 20:00m - analisando design do site do pokemon (extraindo cores e padrões)
 
 *eventos do Vue
 *textos em arquivo JSON para tradução
 *arquivo de configuração para endpoint de API
-*utilizando Sass css para style
+*utilizando SCSS para style
 *notificação(colocar lib usada)

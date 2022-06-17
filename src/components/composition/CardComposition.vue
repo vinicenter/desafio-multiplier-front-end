@@ -111,7 +111,7 @@ export default {
   }
 
   &-header {
-    background-color: var(--background-tertiary);
+    background-color: var(--card-background-color);
   }
   &-body {
     padding: 1rem 1rem 1rem 1rem;

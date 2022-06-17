@@ -31,3 +31,7 @@ export function getPokemonsCount() {
   const pokemonListArray = pokemonList.split(', ');
   return pokemonListArray.length;
 }
+
+export function isPokedexEmpty() {
+  return getPokemonsCount() === 0;
+}

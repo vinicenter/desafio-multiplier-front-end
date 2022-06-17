@@ -5,12 +5,12 @@ import TitleComponent from '@/components/core/TitleComponent.vue';
 import ButtonComponent from '@/components/core/ButtonComponent.vue';
 import InputComponent from '@/components/core/form/InputComponent.vue';
 import PokemonDetailsModalComposition from '@/components/composition/pokemon/PokemonDetailsModalComposition.vue';
+import PokemonImageComposition from '@/components/composition/pokemon/PokemonImageComposition.vue';
 import axios from '@/util/request';
-import config from '@/config/config.json';
 import content from '@/config/content.json';
 import {
   addPokemonToLocalStorage,
-} from '@/util/pokedex';
+} from '@/util/pokedexLocalStorage';
 </script>
 
 <script>
@@ -86,6 +86,10 @@ export default {
     CardComponent,
     TitleComponent,
     PageComposition,
+    ButtonComponent,
+    InputComponent,
+    PokemonDetailsModalComposition,
+    PokemonImageComposition,
   },
 };
 </script>
@@ -99,7 +103,7 @@ export default {
     <hr />
 
     <InputComponent
-      v-model="searchQuery"
+      v-bind:value='searchQuery' v-on:input='searchQuery = $event.target.value'
       :placeholder="content.searchPokemon.placeholder"
       :label="content.searchPokemon.label"
       type="search"
@@ -111,9 +115,12 @@ export default {
       <CardComponent
         v-for="(entity) in searchPokemon"
         :key="entity"
-        :imgUrl="`${config.spriteBaseUrl}/${getPokemonIdByUrl(entity.url)}.png`"
         collum="col-12 col-md-6 col-lg-4"
       >
+        <PokemonImageComposition
+          :pokemonId="getPokemonIdByUrl(entity.url)"
+        />
+
         <TitleComponent>{{entity.name}}</TitleComponent>
         <ButtonComponent
           @click="addPokemonToPokedex(getPokemonIdByUrl(entity.url))"
@@ -137,6 +144,7 @@ export default {
       modalId="pokemonDetails"
       :pokemonOnModal="pokemonOnModal"
       :isModalLoaded="isModalLoaded"
+      @imageChanged="loadPage()"
     />
   </PageComposition>
 </template>

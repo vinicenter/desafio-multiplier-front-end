@@ -1,6 +1,6 @@
 <script setup>
 import NavBarComposition from '@/components/composition/NavBarComposition.vue';
-import { getPokemonsCount } from '@/util/pokedex';
+import { getPokemonsCount } from '@/util/pokedexLocalStorage';
 </script>
 
 <script>
@@ -40,7 +40,6 @@ export default {
 <style lang="scss">
 //global theme colors
 :root {
-  --main-color: #E3350D;
   --hover-color: #a2a2a2;
   --text-color: #fff;
   --navbar-text-color: #000;
@@ -48,9 +47,6 @@ export default {
   --navbar-color:  #fff;
   --border-color: #fff;
   --card-background-color: #313131;
-  --background-primary: #C1CAFF;
-  --background-secondary: #b3b3b3;
-  --background-tertiary: #6f6f6f;
 }
 
 //bootstrap color config

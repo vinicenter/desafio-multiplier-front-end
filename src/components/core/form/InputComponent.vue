@@ -35,13 +35,6 @@ export default {
     },
   },
   methods: {
-    doInput(e) {
-      let ret = e.target.value;
-      if (this.type === 'number') {
-        ret = parseFloat(ret);
-      }
-      this.$emit('update:modelValue', ret);
-    },
   },
 };
 </script>
@@ -58,9 +51,7 @@ export default {
         v-bind:readonly="isReadonly === true"
         v-bind:disable="isDisabled === true"
         ref="input"
-        :value="this.$attrs.modelValue"
         :type="type"
-        @input="doInput($event)"
       >
       <div class="form-text">
         {{ footer }}

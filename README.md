@@ -2,10 +2,10 @@
 
 <img src="https://i.imgur.com/9zwEt3A.png" width="700" height="auto" alt="Mockup Image for project"></img>
 
-# Veja o projeto ao vivo por meio deste link:
+# Veja o projeto ao vivo
 https://vini.center/pokedex
 
-# Como rodar o projeto em sua máquina?
+# Como rodar em sua máquina?
 
 ## Dependências gerais
 

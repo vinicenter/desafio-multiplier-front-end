@@ -1,3 +1,67 @@
+# Como rodar o projeto em sua máquina?
+
+## Dependências gerais do projeto
+
+Para rodar o projeto em sua máquina, você irá precisar das seguintes dependências:
+
+<ul>
+  <li>NPM</li>
+  <li>Node</li>
+  <li>Git</li>
+</ul>
+
+## Baixando e rodando o projeto
+
+Após ter satisfeito essas depêndencias, você pode clonar o repositório com o comando abaixo:
+```sh
+git clone https://github.com/vinicenter/pokedex.git
+```
+
+Após ter clonado o repositório, é necessário instalar as dependências locais com o comando abaixo:
+```sh
+npm install
+```
+
+Para iniciar o servidor de desenvolvimento, use o comando abaixo:
+```sh
+npm run serve
+```
+
+Para buildar o projeto, configure a publicPath no arquivo "vue.config.js", e depois use o comando abaixo:
+```sh
+npm run build
+```
+
+# O que foi usado para desenvolver o projeto?
+
+## Tecnologias usadas para o desenvolvimento
+
+<ul>
+<li>Vue.JS</li>
+<li>Bootstrap</li>
+<li>Axios</li>
+<li>Sass</li>
+<li>ESLint</li>
+<li>Vue-cli</li>
+</ul>
+
+## Bibliotecas do framework Vue
+
+<ul>
+<li>vue3-notification</li>
+</ul>
+
+# Diferenciais do projeto
+
+<ul>
+<li>Arquivo de configuração de texto para rápida tradução das mensagens</li>
+<li>Alto nível de componentização</li>
+<li>Linter para manter o código padronizado</li>
+</ul>
+
+<hr />
+
+# Introdução do desafio da Multiplier
 
 <p align="center">
   <img src="https://multiplier.com.br/assets/multiplier.svg" width="320" alt="Nest Logo" />
@@ -25,24 +89,24 @@ Com esta API([pokeapi v2](https://pokeapi.co/docsv2/#)) em mãos, precisamos que
 
 **Sua aplicação DEVE:**
 
-1. Ter um filtro para buscar os pokémons por nome ou número. X
-2. Adicionar ou capturar, como preferir, novos pokémons a Pokédex que a principio estará vazia. X
-3. Listar os pokémons que foram adicionados a Pokédex. X
+1. Ter um filtro para buscar os pokémons por nome ou número.
+2. Adicionar ou capturar, como preferir, novos pokémons a Pokédex que a principio estará vazia.
+3. Listar os pokémons que foram adicionados a Pokédex.
 4. Mostrar detalhes do personagem adicionados a Pokédex como: 
-    - Nome X
-    - Imagem dando a opção do usuário fazer upload de sua própria imagem, substituindo a que é entregue via API X
-    - Peso X
-    - Tamanho X
-    - Lista de tipos X
-    - Lista de habilidades X
-    - Estatísticas de velocidade X
-    - Defesa X
-    - Ataque X
-    - Hp X
+    - Nome
+    - Imagem dando a opção do usuário fazer upload de sua própria imagem, substituindo a que é entregue via API
+    - Peso
+    - Tamanho
+    - Lista de tipos
+    - Lista de habilidades
+    - Estatísticas de velocidade
+    - Defesa
+    - Ataque
+    - Hp
     - Cada passo de sua evolução
-    - Ao clicar em um item da lista de tipos, mostrar todos os pokémons daquele mesmo tipo, inclusive os que ainda não estão adicionados a Pokédex X
+    - Ao clicar em um item da lista de tipos, mostrar todos os pokémons daquele mesmo tipo, inclusive os que ainda não estão adicionados a Pokédex
     - Ao clicar em um item da lista de habilidades mostrar o `short_effect` da mesma da para fazer com as notificações
-5. Excluir os pokémons que foram adicionados a Pokédex. X
+5. Excluir os pokémons que foram adicionados a Pokédex.
 
 **Sua aplicação web NÃO PRECISA:**
 
@@ -76,15 +140,3 @@ Adicionalmente, tentaremos verificar sua experiência com programação funciona
 ---
 
 ## Boa sorte!
-
-
-
-4:30h - desenvolvendo
-1:00h - analisando API (identificando endpoints, rotas e etc)
-20:00m - analisando design do site do pokemon (extraindo cores e padrões)
-
-*eventos do Vue
-*textos em arquivo JSON para tradução
-*arquivo de configuração para endpoint de API
-*utilizando SCSS para style
-*notificação(colocar lib usada)

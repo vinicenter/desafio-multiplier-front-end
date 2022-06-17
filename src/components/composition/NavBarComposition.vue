@@ -1,4 +1,5 @@
 <script setup>
+import logo from '@/assets/logo.png';
 import content from '@/config/content.json';
 </script>
 
@@ -6,7 +7,7 @@ import content from '@/config/content.json';
   <nav class="navbar navbar-expand-lg navbar-light position-fixed bg-light">
     <div class="container-fluid">
       <RouterLink class="navbar-brand" to="/">
-        <img :src="content.brand.logo" alt="" width="60" height="60">
+        <img :src="logo" alt="" width="60" height="60">
         <a class="appname">{{ content.brand.appname }}</a>
       </RouterLink>
       <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">

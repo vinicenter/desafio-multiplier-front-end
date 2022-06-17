@@ -1,7 +1,6 @@
 {
   "brand": {
-    "appname": "Pokédex",
-    "logo": "/logo.png"
+    "appname": "Pokédex"
   },
   "generic": {
     "load": {

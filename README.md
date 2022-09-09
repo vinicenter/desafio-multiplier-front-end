@@ -3,7 +3,7 @@
 <img src="https://i.imgur.com/9zwEt3A.png" width="700" height="auto" alt="Mockup Image for project"></img>
 
 # Veja o projeto ao vivo
-https://vini.center/pokedex
+https://pokedex.vini.center
 
 # Como rodar em sua máquina?
 
